@@ -13,6 +13,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LogInterceptor } from './log.interceptor';
+import { VerConsultaComponent } from './ver-consulta/ver-consulta.component';
+import { EditarConsultarComponent } from './editar-consultar/editar-consultar.component';
+import { EditarConsultarPacienteComponent } from './editar-consultar-paciente/editar-consultar-paciente.component';
+import { VerConsultaPacienteComponent } from './ver-consulta-paciente/ver-consulta-paciente.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { LogInterceptor } from './log.interceptor';
     MedicoCadastrarComponent,
     MedicoListarComponent,
     ConsultaComponent,
-    LoginCadastroComponent
+    LoginCadastroComponent,
+    VerConsultaComponent,
+    EditarConsultarComponent,
+    EditarConsultarPacienteComponent,
+    VerConsultaPacienteComponent
   ],
   imports: [
     BrowserModule,

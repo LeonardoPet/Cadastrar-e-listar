@@ -25,9 +25,10 @@
                 <div class="field is-grouped ">
                     <div class="control">
                     <!-- Botão Ver Consultas-->
-                      <button class="button is-success mx-1">Ver consultas</button>
+                      
+                      <button class="button is-success mx-1 modal-button" routerLink="verConsultaMedica"> Ver consultas</button>
                     <!-- Botão Editar-->
-                      <button class="button is-warning  mx-1">Editar</button>
+                      <button class="button is-warning  mx-1" routerLink="editarConsultaMedica">Editar</button>
                     <!-- Botão deletar-->
                       <button class="button is-danger  mx-1">Deletar</button>
                     </div>
@@ -37,6 +38,13 @@
           </tr>
         </tbody>
       </table>
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+          <h3 class="title mb-6">VAI CARAIO</h3>
+        </div>
+      </div>
     </div>
     </section>
 
