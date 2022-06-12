@@ -1,0 +1,87 @@
+<div *ngIf="sessaoLogada == true; else logadoHTML">
+
+<section class="section">
+    <!-- Mensagem -->
+    <p class="title is-4 has-text-centered">Você ainda não está logado!</p>
+    <!-- Faça Login -->
+    <div class="columns">
+        <div class="column">
+         <!-- Form --> 
+        <form [formGroup]="formLogin" class="box" (submit)="onSubmitLogin()">
+        <div>   
+            <!-- Sub Titulo -->
+            <h4 class="subtitle is-4 has-text-centered">Faça login aqui</h4>
+            <!-- login -->
+            <div class="field">
+            <label class="label">Login</label>
+            <div class="control">
+              <input  class="input" type="text" placeholder="Escreva seu email aqui" formControlName="login">
+            </div>
+          </div>
+          <!-- Senha -->
+          <div class="field">
+            <label class="label" >Senha</label>
+            <div class="control">
+              <input  class="input" type="password" formControlName="senha">
+            </div>
+          </div>
+        <!-- Button -->
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary">Login</button>
+            </div>
+        </div>
+        </div> 
+        </form>
+        </div>
+        
+        
+        <!-- Cadastre-se -->
+        <div class="column">
+        <!-- Form -->
+        <form class="box" [formGroup]="formCadastro" class="box" (submit)="onSubmitCadastrar()">
+        <div>
+           <!-- Sub Titulo -->
+            <h4 class="subtitle is-4 && has-text-centered">Cadastre-se aqui</h4>
+              <!-- Email -->
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input  class="input" type="email" placeholder="Seu Email" formControlName="login">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div> 
+              </div>
+              <!-- Senha -->
+              <div class="field">
+                <label class="label">Senha</label>
+                <div class="control">
+                  <input  class="input" type="password" formControlName="senha">
+                </div>
+              </div>
+              <!-- Button -->
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-primary">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+        </form>
+        </div>
+        </div>
+    
+      </section>
+
+
+    </div>
+
+  <ng-template #logadoHTML>
+
+    <p class="title is-4 has-text-centered my-6 p-6">Você está logado!</p>
+
+    
+  </ng-template>

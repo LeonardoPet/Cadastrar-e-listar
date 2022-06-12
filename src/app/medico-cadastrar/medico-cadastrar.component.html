@@ -1,0 +1,55 @@
+<!-- Section -->
+<section class="section">
+    <!-- Titulo -->
+    <h1 class="title is-2 has-text-centered">Cadastrar novo médico</h1>
+    <!-- center -->
+    <div class="columns is-centered">
+    <div class="column is-left">
+    <form [formGroup]="formCadastroMedico" (submit)="realizarCadastroMedico()" class="box">
+        <!--Input Name -->
+        <div class="field">
+            <label class="label">Nome</label>
+            <div class="control">
+              <input formControlName="nome"  class="input" type="text" placeholder="Escreva seu nome aqui">
+            </div>
+          </div>
+        
+        <!-- Select especialidade -->
+        <!--<label class="label">Especialidade</label>
+        <div formControlName="especialidade" class="select">
+            <select>
+              <option id="1">Anestesista</option>
+              <option id="2">Cardiologista</option>
+              <option id="3">Cirurgia Geral</option>
+              <option id="4">Oftalmologista</option>
+              <option id="5">Oncologista</option>
+              <option id="6">Ortopedista</option>
+              <option id="7">Psiquiatra</option>
+            </select>
+          </div>-->
+
+
+
+
+          <label class="label">Especialidade</label>
+        <div class="select">
+            <select formControlName="especialidade" (change)="escolheEspecialidade($event)">
+              <option value= "{{i+1}}" *ngFor="let especialidade of listaEspecialidades, let i = index">{{especialidade.nome}}</option>
+            </select>
+        </div>
+
+
+
+
+        
+        <!-- cadastrar -->
+        <div class="field is-grouped my-5">
+            <div class="control">
+              <button class="button is-link" >Cadastrar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    
+    </div>
+    </section>

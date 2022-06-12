@@ -1,0 +1,66 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    
+      <!-- Nav Pacientes-->
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Pacientes
+        </a>
+        <div class="navbar-dropdown">
+          <a href="#" class="navbar-item" routerLink="/listarPaciente">
+            Listar
+          </a>
+          <a href="#" class="navbar-item" routerLink="/cadastrarPaciente" >
+            Cadastrar
+          </a>
+        </div>
+      </div>
+      <!-- Nav Médicos-->
+      <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Médicos
+          </a>
+          <div class="navbar-dropdown">
+            <a href="#" class="navbar-item" routerLink="/listarMedico">
+              Listar
+            </a>
+            <a href="#" class="navbar-item" routerLink="/cadastrarMedico">
+              Cadastrar
+            </a>
+          </div>
+        </div>
+       <!-- Link Adicionar consulta --> 
+        <div class="navbar-item">
+          <a href="#">
+              Adicionar consulta
+            </a>
+        </div>
+
+
+
+    <!-- botão Sair-->
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <button class="button is-primary">
+            <strong>Sair</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

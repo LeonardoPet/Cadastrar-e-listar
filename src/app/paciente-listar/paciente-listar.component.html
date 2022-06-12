@@ -1,0 +1,42 @@
+<!-- Section -->
+<section class="section">
+    <!-- Titulo -->
+    <h1 class="title is-2 has-text-centered">Lista de pacientes</h1>
+    
+    <div class="columns is-centered">
+    <!-- Tabela -->
+    <table class="table">
+        <!-- Cabeçalho -->
+        <thead>
+          <tr>
+            <th class="has-text-centered"><abbr title="Nome">Nome</abbr></th>
+            <th class="has-text-centered"><abbr title="DataCadastro">Data de Nascimento</abbr></th>
+            <th class="has-text-centered"><abbr title="Especialidade">Data de Cadastro</abbr></th>
+            <th class="has-text-centered"><abbr title="Ações">Ações</abbr></th>
+          </tr>
+        </thead>
+        <!-- Linha -->
+        <tbody>
+          <tr *ngFor="let paciente of listaPacientes">
+            <td>{{paciente.nome}}</td>
+            <td>{{paciente.dataNascimento}}</td>
+            <td>{{paciente.dataCadastro}}</td>
+            <td>
+                <div class="field is-grouped ">
+                    <div class="control">
+                    <!-- Botão Ver Consultas-->
+                    
+                      <button class="button is-success mx-1">Ver consultas</button>
+                    <!-- Botão Editar-->
+                      <button class="button is-warning  mx-1">Editar</button>
+                    <!-- Botão deletar-->
+                      <button class="button is-danger  mx-1">Deletar</button>
+                    </div>
+                </div>
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
