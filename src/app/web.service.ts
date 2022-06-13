@@ -67,6 +67,14 @@ export class WebService {
     }))
   }
   
-  
+  editarMedico(nome,id, especialidade){
+    let body = new HttpParams ();
+    body = body.set("nome", nome);
+    body = body.set("id", id)
+    body = body.set("idEspecialidade", especialidade)
+    return this.http.put<any>(this.rotaMedicos, body).pipe(tap(res =>{
+    }))
+  }
+
   constructor(private http: HttpClient) { }
 }

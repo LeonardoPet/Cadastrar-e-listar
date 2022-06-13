@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: "listarMedico", component: MedicoListarComponent},
   { path: "adicionaConsulta", component: ConsultaComponent},
   { path: "listarMedico/verConsultaMedica/:id", component:VerConsultaComponent},
-  { path: "listarMedico/editarConsultaMedica/:id", component: EditarConsultarComponent},
+  { path: "listarMedico/editarConsultaMedica/:id/:name/:especialidade", component: EditarConsultarComponent},
   { path: "listarPaciente/verConsultaPaciente/:id", component: VerConsultaPacienteComponent},
   { path: "listarPaciente/editarConsultaPaciente/:id", component:EditarConsultarPacienteComponent}
   ];
