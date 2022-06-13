@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from "rxjs"
+import { Consulta } from './Consulta';
 import { Medico } from './Medico';
 import { Especialidade } from './model/Especialidade';
 import { Paciente } from './Paciente';
@@ -46,6 +47,11 @@ export class WebService {
     }));
   }
 
+  listarConsulta(): Observable<Consulta[]>{
+    return this.http.get<Consulta[]>(this.rotaConsulta).pipe(tap(res =>{ 
+    }));
+  }
+
   cadastrarConsulta(medico,paciente,dataConsulta,horaConsulta){
     let body = new HttpParams ();
     body = body.set("idMedico", medico);
@@ -56,5 +62,11 @@ export class WebService {
     
   }
 
+  removerConsulta(id: string): Observable<any>{
+    return this.http.delete(this.rotaConsulta + "?id=" + id).pipe(tap(res => {
+    }))
+  }
+  
+  
   constructor(private http: HttpClient) { }
 }

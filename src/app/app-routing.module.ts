@@ -18,10 +18,10 @@ const routes: Routes = [
   { path: "listarPaciente", component: PacienteListarComponent},
   { path: "listarMedico", component: MedicoListarComponent},
   { path: "adicionaConsulta", component: ConsultaComponent},
-  { path: "listarMedico/verConsultaMedica", component:VerConsultaComponent},
-  { path: "listarMedico/editarConsultaMedica", component: EditarConsultarComponent},
-  { path: "listarPaciente/verConsultaPaciente", component: VerConsultaPacienteComponent},
-  { path: "listarPaciente/editarConsultaPaciente", component:EditarConsultarPacienteComponent}
+  { path: "listarMedico/verConsultaMedica/:id", component:VerConsultaComponent},
+  { path: "listarMedico/editarConsultaMedica/:id", component: EditarConsultarComponent},
+  { path: "listarPaciente/verConsultaPaciente/:id", component: VerConsultaPacienteComponent},
+  { path: "listarPaciente/editarConsultaPaciente/:id", component:EditarConsultarPacienteComponent}
   ];
 
 

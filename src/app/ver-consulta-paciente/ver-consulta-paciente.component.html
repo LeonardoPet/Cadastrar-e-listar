@@ -24,16 +24,16 @@
         </thead>
         <!-- Linha -->
         <tbody>
-          <tr>
-            <td>teste medico</td>
-            <td>teste paciente</td>
-            <td>teste data</td>
+            <tr *ngFor="let consulta of listaConsultasFiltradas">
+                <td>{{consulta.idMedico}}</td>
+                <td>{{consulta.idPaciente}}</td>
+                <td>{{consulta.data}}</td>
             
             <td>
                 <div class="field is-grouped ">
                     <div class="control">
                     <!-- Botão Cancelar-->
-                      <button class="button is-danger mx-1 modal-button" >Cancelar</button>
+                      <button class="button is-danger mx-1 modal-button" (click)="deletarConsulta(consulta.id)">Cancelar</button>
                     </div>
                 </div>
                 
