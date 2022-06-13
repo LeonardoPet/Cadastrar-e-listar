@@ -17,7 +17,7 @@
         <div class="field">
             <label class="label">Nome</label>
             <div class="control">
-              <input class="input" type="text">
+              <input value="{{name}}" class="input" type="text">
             </div>
           </div>
         
@@ -25,18 +25,15 @@
           <label class="label">Especialidade</label>
         <div class="select">
             <select>
-              <option>teste</option>
+              <option>{{especialidade}}</option>
             </select>
         </div>
-
-
-
 
         
         <!-- cadastrar -->
         <div class="field is-grouped my-5">
             <div class="control">
-              <button class="button is-link" >Editar</button>
+              <button class="button is-link" (click)="editarMedico()">Editar</button>
             </div>
         </div>
         </form>
